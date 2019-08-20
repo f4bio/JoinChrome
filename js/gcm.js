@@ -325,7 +325,7 @@ var GCMPush = function(){
 			if(this.push.language){
 				options.lang = this.push.language;
 			}
-			chrome.tts.speak(this.push.say, options);
+			// chrome.tts.speak(this.push.say, options);
 		}
 		var googleDriveManager = new GoogleDriveManager();
 		googleDriveManager.addPushToMyDevice(this.push);

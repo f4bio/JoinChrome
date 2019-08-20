@@ -6,9 +6,6 @@
 	"content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
     "permissions": [
 		"identity",
-		"identity.email",
-		"background",
-		"gcm",
 		"storage",
 		"unlimitedStorage",
 		"webRequest",
@@ -24,7 +21,6 @@
 		"contextMenus",
 		"geolocation",
 		"activeTab",
-		"tts",
         "https://www.googleapis.com/"
 	],
 	"icons": {
@@ -50,29 +46,25 @@
 			"suggested_key": {
 				"default": "Ctrl+Shift+K"
 			},
-			"description": "Show devices popup to perform commands",
-			"global": true
+			"description": "Show devices popup to perform commands"
 		},
 		"repeat-last-command": {
 			"suggested_key": {
 				"default": "Ctrl+Shift+L"
 			},
-			"description": "Repeat last command",
-			"global": true
+			"description": "Repeat last command"
 		},
 		"favorite-command": {
 			"suggested_key": {
 				"default": "Ctrl+Shift+P"
 			},
-			"description": "Perform Favorite Command",
-			"global": true
+			"description": "Perform Favorite Command"
 		},
 		"voice-command": {
 			"suggested_key": {
 				"default": "Ctrl+Shift+V"
 			},
-			"description": "Voice Command",
-			"global": true
+			"description": "Voice Command"
 		}
 	},
 	"key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsfKrN+vAk/h3UX6prKsJFJi++pcCk3Aw2+L23//tAubEa3ZXM6oLHSRf0E/O7Bk2z/nYVN0enIkJ+D88UMKfGeeVDftuhDTIHRqIn6xSRgrqiOXxiLo7w9AdSHgu7dVkizxuFSVr0rq6HB4gqoeSazZS7V1jYBKZ4ZBtpn32efj9r13YT/C0gwNT7k/hnFd8y2lyahqSDG+hcB+i15naHjMxDgo7sr3xFE4jn46N+QXTfPOV7NntnSKJEE4LEdUFNoSkSniO41Z6AWajgw58JZwFigyLlV7xEA/PIIkRMpX9RIQ3LWbyk5q7rUM+eYvc+WKqIZQSlH76dQTWFPSY+wIDAQAB",

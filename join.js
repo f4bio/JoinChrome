@@ -907,14 +907,14 @@ var onvoicecontinuoussave = UtilsObject.async(function* (option, value){
     var callbackPromptFunc =  (prompt, notificationTime)=>{
     	return new Promise(function(resolve,reject){
 			if(UtilsObject.isString(prompt)){
-				chrome.tts.speak(prompt,{
-					"lang": 'en-US',
-					"onEvent": function(event){
-						if(event.type == 'end' || event.type == 'error'|| event.type == 'interrupted'|| event.type == 'cancelled'){
-							resolve();
-						}
-					}
-				});
+				// chrome.tts.speak(prompt,{
+				// 	"lang": 'en-US',
+				// 	"onEvent": function(event){
+				// 		if(event.type == 'end' || event.type == 'error'|| event.type == 'interrupted'|| event.type == 'cancelled'){
+				// 			resolve();
+				// 		}
+				// 	}
+				// });
 				showNotification("Voice",prompt,notificationTime);	
 			}else{
 				console.error("Prompt is not text");
@@ -930,7 +930,7 @@ var onvoicecontinuoussave = UtilsObject.async(function* (option, value){
 			yield UtilsVoice.voiceRecognizer.isMicAvailable();
 		}catch(error){
     		setVoiceContinuous(false);
-			chrome.tts.speak("Click the generated notification to enable your mic");
+			// chrome.tts.speak("Click the generated notification to enable your mic");
 			var chromeNotification = new ChromeNotification({
 				"id":"micnotavailable",
 				"title":"Error",
@@ -1648,10 +1648,10 @@ const handlePushMessage = message => {
 		}
 	}
 }
-chrome.gcm.onMessage.addListener(payload=>{
-	payload.pushHandler = "gcm";
-	handlePushMessage(payload);
-});
+// chrome.gcm.onMessage.addListener(payload=>{
+// 	payload.pushHandler = "gcm";
+// 	handlePushMessage(payload);
+// });
 /*chrome.gcm.onMessage.addListener(function(message){
 	console.log(message);
 	var multiIndexString = message.data.multi;
@@ -1743,7 +1743,7 @@ var setLocalDeviceNameFromDeviceList = function(){
 }
 const getInstanceIdToken = senderId => {
 	return new Promise((resolve,reject)=>{
-		chrome.instanceID.getToken({"authorizedEntity":senderId,"scope":"GCM"},resolve);
+		// chrome.instanceID.getToken({"authorizedEntity":senderId,"scope":"GCM"},resolve);
 	});
 }
 //const fcmClient = new FCMClientImplementation();
